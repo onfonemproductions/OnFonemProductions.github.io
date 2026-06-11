@@ -58,13 +58,32 @@
             height: auto;    /* Keeps the original image proportions */
         }
 
+        .discord-logo {
+            position: absolute;
+            top: 70px;       /* Distance from the top edge */
+            left: 10px;      /* Distance from the left edge */
+            width: 85px;     /* Forces the image to a clean size */
+            height: auto;    /* Keeps the original image proportions */
+        }
+
         .container {
             text-align: center;
             max-width: 950px;
             padding: 20px;
         }
+
+        .leftContainer {
+            max-width: 950px;
+            padding: 20px;
+        }
+
+
         h1 {
             font-size: 56px;
+            margin: 0 0 20px 0;
+        }
+        h2 {
+            font-size: 36px;
             margin: 0 0 20px 0;
         }
         hr {
@@ -80,23 +99,42 @@
             margin: 0;
         }
 
-
         .side-button-link {
             position: absolute;
-            top: 40px;
-            right: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-decoration: none;
+
+            width: 1000px;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: center;
+        }
+
+        /*
+                <!--
+        .side-button-link {
+            position: absolute;
+            display: flex;
+            justify-content: center;
             text-decoration: none;
         }
 
+                -->
+                */
 
-        .side-button {
-            background-image: url('res/assets/images/takaba.webp');
+
+        .ModPacks-button {
+            background-image: url('res/assets/images/icons/Fonem Prod MP Icon.png');
             background-size: cover;
             background-position: center;
             color: #ffffff;
             font-weight: bold;
-            font-size: 16px;
-            padding: 15px 30px;
+            font-size: 18px;
+
+            padding: 48px 226px;
+
             border: 2px solid #ffffff;
             border-radius: 8px;
             cursor: pointer;
@@ -108,6 +146,9 @@
         .side-button:hover {
             transform: scale(1.05);
         }
+        /*
+                        <p style="margin: -20px; margin-top: 50px">Mod Packs</p>
+         */
 
     </style>
 </head>
@@ -116,11 +157,15 @@
 
 
 
-    <a href="res/pages/modpacks.html" class="side-button-link">
-        <button class="side-button">Mod Packs!!!</button>
+
+    <a href="index.html" class="corner-logo-link">
+        <img src="res/assets/images/takaba.webp" alt="Logo" class="corner-logo">
     </a>
 
-    <img src="res/assets/images/takaba.webp" alt="Logo" class="corner-logo">
+    <a href="https://discord.com" class="discord-logo">
+        <img src="res/assets/images/icons/discord_PNG30.png" alt="discord" class="discord-logo">
+    </a>
+
     <div class="border-pillar">
         <div class="content-column">
             <div class="container">
@@ -129,8 +174,22 @@
                 <hr>
                 <p>The place to find On Fonems Cobblemon servers modpack development and changelog. Join the discord if you haven't, and feel free to leave feedback and suggestions on what you guys want more of or would like to intregate!</p>
             </div>
+            <div class="container">
+                <h2>
+                    ~ Areas of Interest ~
+                </h2>
+
+            </div>
+
+            <a href="res/pages/modpacks.html" class="side-button-link">
+
+                <button class="ModPacks-button"></button>
+            </a>
         </div>
     </div>
+
+
+
 
 </body>
 </html>
