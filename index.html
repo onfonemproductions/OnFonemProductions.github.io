@@ -6,6 +6,7 @@
     <title>On Fonem Productions</title>
     <style>
         body {
+            background-image: url('res/assets/images/MainPageBG.png');
             background-color: #404040; /* Classic grey background */
             color: #ffffff; /* White text for high contrast */
             font-family: Arial, sans-serif;
@@ -16,6 +17,38 @@
             align-items: flex-start;
             min-height: 100vh;
         }
+
+
+        /* 3. The outer black border container */
+        .border-pillar {
+            background-color: rgba(0, 0, 0, 0.85);
+            width: 100%;
+            max-width: 900px; /* Controls how wide the pillar is */
+
+            /* Forces it to take up the full screen height */
+            min-height: 100vh;
+
+            /* Adds a border effect on the left and right sides only */
+            padding: 0 15px;
+            box-sizing: border-box;
+
+            /* Setup internal layout to stretch the inner gray box */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 4. The inner gray content column */
+        .content-column {
+            background-color: rgba(49, 49, 49, 0.85);
+            color: #ffffff;
+            padding: 40px 20px; /* Space inside for text */
+
+            /* Forces the gray box to stretch completely to the bottom */
+            flex-grow: 1;
+        }
+
+
+
         /* Top Left Corner Image Styling */
         .corner-logo {
             position: absolute;
@@ -80,16 +113,23 @@
 </head>
 <body>
 
+
+
+
     <a href="res/pages/modpacks.html" class="side-button-link">
         <button class="side-button">Mod Packs!!!</button>
     </a>
 
     <img src="res/assets/images/takaba.webp" alt="Logo" class="corner-logo">
+    <div class="border-pillar">
+        <div class="content-column">
+            <div class="container">
 
-    <div class="container">
-        <h1>On Fonem Productions</h1>
-        <hr>
-        <p>The place to find On Fonems Cobblemon servers modpack development and changelog. Join the discord if you haven't, and feel free to leave feedback and suggestions on what you guys want more of or would like to intregate!</p>
+                <h1>On Fonem Productions</h1>
+                <hr>
+                <p>The place to find On Fonems Cobblemon servers modpack development and changelog. Join the discord if you haven't, and feel free to leave feedback and suggestions on what you guys want more of or would like to intregate!</p>
+            </div>
+        </div>
     </div>
 
 </body>

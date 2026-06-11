@@ -6,6 +6,8 @@
     <title>On Fonem Productions</title>
     <style>
         body {
+            background-image: url('../assets/images/CrystalCaveRaidBG.png');
+            background-position: center;
             background-color: #404040; /* Classic grey background */
             color: #ffffff; /* White text for high contrast */
             font-family: Arial, sans-serif;
@@ -16,6 +18,43 @@
             align-items: flex-start;
             min-height: 100vh;
         }
+
+
+
+        /* 3. The outer black border container */
+        .border-pillar {
+            background-color: rgba(0, 0, 0, 0.85);
+            width: 100%;
+            max-width: 900px; /* Controls how wide the pillar is */
+
+            /* Forces it to take up the full screen height */
+            min-height: 100vh;
+
+            /* Adds a border effect on the left and right sides only */
+            padding: 0 15px;
+            box-sizing: border-box;
+
+            /* Setup internal layout to stretch the inner gray box */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 4. The inner gray content column */
+        .content-column {
+            background-color: rgba(49, 49, 49, 0.85);
+            color: #ffffff;
+            padding: 40px 20px; /* Space inside for text */
+
+            /* Forces the gray box to stretch completely to the bottom */
+            flex-grow: 1;
+        }
+
+
+
+
+
+
+
         /* Top Left Corner Image Styling */
         .corner-logo {
             position: absolute;
@@ -85,18 +124,22 @@
 <img src="../assets/images/takaba.webp" alt="Logo" class="corner-logo">
 </a>
 
-<div class="container">
-    <h1>Modpacks & Servers</h1>
-    <hr>
-    <p>Modpacks and servers of On Fonem Productions!</p>
+<div class="border-pillar">
+    <div class="content-column">
+        <div class="container">
+            <h1>Modpacks & Servers</h1>
+            <hr>
+            <p>Modpacks and servers of On Fonem Productions!</p>
 
-    <a
-            href="https://onedrive.live.com/download?cid=73FA58877E992A0C&resid=73FA58877E992A0C%21sd75f756fe2d0439587285ee69d2b0aad"
-            target="_blank"
-            rel="noopener"
-    >
-        Download Test File
-    </a>
+            <a
+                    href="https://onedrive.live.com/download?cid=73FA58877E992A0C&resid=73FA58877E992A0C%21sd75f756fe2d0439587285ee69d2b0aad"
+                    target="_blank"
+                    rel="noopener"
+            >
+                Download Test File
+            </a>
+        </div>
+    </div>
 </div>
 
 </body>
